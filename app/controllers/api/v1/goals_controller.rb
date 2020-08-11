@@ -41,7 +41,7 @@ module Api
             private
 
             def goal_params
-                params.require(:goal).permit(:user_id, :goal_name, :goal_description, :date, :is_complete, :red, :green, :blue)
+                params.require(:goal).permit(:user_id, :goal_name, :goal_description, :date, :is_complete, :rgb)
             end 
         end
     end

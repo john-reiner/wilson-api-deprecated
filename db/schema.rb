@@ -51,9 +51,7 @@ ActiveRecord::Schema.define(version: 2020_05_22_175213) do
     t.text "goal_description"
     t.string "date"
     t.boolean "is_complete"
-    t.integer "red"
-    t.integer "green"
-    t.integer "blue"
+    t.string "rgb"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -61,6 +59,7 @@ ActiveRecord::Schema.define(version: 2020_05_22_175213) do
   create_table "tasks", force: :cascade do |t|
     t.integer "goal_id"
     t.string "name"
+    t.boolean "is_complete"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

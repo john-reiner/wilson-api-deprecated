@@ -35,7 +35,7 @@ module Api
             private
 
             def task_params
-                params.require(:task).permit(:goal_id, :name)
+                params.require(:task).permit(:goal_id, :name, :is_complete)
             end 
             
         end

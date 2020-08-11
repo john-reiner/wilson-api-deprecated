@@ -11,7 +11,9 @@ module Api
             def show
                 user = User.find_by(id: params[:id])
                 render json: user.to_json(:include => {
-                    :goals => {:only => [:id, :goal_name, :goal_description, :date, :is_complete, :red, :green, :blue], include: [:tasks, :goal_resources]},
+                    :tasks => {:only => [:id, :name, :is_complete]},
+                    :goal_resources => {:only => [:id, :name, :description, :url]},
+                    :goals => {:only => [:id, :goal_name, :goal_description, :date, :is_complete, :rgb], include: [:tasks, :goal_resources]},
                 }, except: [:created_at, :updated_at])
             end
 
