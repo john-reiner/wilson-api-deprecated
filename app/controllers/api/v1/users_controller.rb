@@ -13,7 +13,7 @@ module Api
                 render json: user.to_json(:include => {
                     :tasks => {:only => [:id, :name, :is_complete]},
                     :goal_resources => {:only => [:id, :name, :description, :url]},
-                    :goals => {:only => [:id, :goal_name, :goal_description, :date, :is_complete, :rgb], include: [:tasks, :goal_resources]},
+                    :goals => {:only => [:id, :goal_name, :goal_description, :date, :is_complete, :rgb, :date_completed], include: [:tasks, :goal_resources]},
                 }, except: [:created_at, :updated_at])
             end
 

@@ -83,3 +83,4 @@ production:
   database: db/production.sqlite3
   username: my_goal_app_backend
   password: <%= ENV['MY_GOAL_APP_BACKEND_DATABASE_PASSWORD'] %>
+  adapter: 'postresql'

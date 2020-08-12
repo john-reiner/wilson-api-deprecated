@@ -51,6 +51,7 @@ ActiveRecord::Schema.define(version: 2020_05_22_175213) do
     t.text "goal_description"
     t.string "date"
     t.boolean "is_complete"
+    t.string "date_completed"
     t.string "rgb"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
